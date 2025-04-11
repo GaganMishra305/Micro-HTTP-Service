@@ -4,6 +4,6 @@ const { fetchAndStoreStudents, getStudents } = require('../controllers/students.
 const authenticateToken = require('../middleware/auth');
 
 // router.post('/fetch', fetchAndStoreStudents);
-router.get('/', getStudents);
+router.get('/',authenticateToken, getStudents);
 
 module.exports = router;

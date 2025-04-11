@@ -23,7 +23,6 @@ const fetchAndStoreStudents = async (req, res) => {
 
 const getStudents = async (req, res) => {
     try {
-      console.log(req)
       const { sort, active, course, age, id, order = 'asc' } = req.query;
       
       // If ID is provided, return single student
